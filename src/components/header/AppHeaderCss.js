@@ -10,6 +10,10 @@ sticky:{
     backgroundColor:'#dff9fb'
    
 },
+profileInfo:{
+display:'flex',
+
+},
 
 btnstyle:{
     fontWeight:'bold',
@@ -28,6 +32,23 @@ btnstyle:{
       }
   
 },
+btnstylelogut:{
+    fontWeight:'bold',
+    textTransform:'capitalize',
+    borderRadius:15,
+    background:'none',
+    color:'#fff',
+    padding:10,
+    border:'none',
+    backgroundColor:'red',
+    margin:10,
+    justifyContent:'flex-end',
+
+    "&:hover": {
+        background: "#22a6b3",
+        cursor:'pointer'
+      }
+}
 
 
 

@@ -45,4 +45,8 @@
 .gap{
     font-weight: 600;
 }
-  
+  .link{
+    color: rebeccapurple;
+    cursor: pointer;
+    text-decoration: underline blue
+  }

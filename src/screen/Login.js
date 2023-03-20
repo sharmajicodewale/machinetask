@@ -1,11 +1,9 @@
 import { useState } from "react";
 import "./register.css";
 import FormInput from '../components/forminput/FormInput'
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Swal from "sweetalert2"
 import { useNavigate } from "react-router-dom"
-
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
@@ -28,6 +26,7 @@ export default function Login() {
             errorMessage: "It should be a valid email address/mobile number!",
             label: "Email/Mobile",
             required: true,
+          
 
 
         },
@@ -64,7 +63,7 @@ export default function Login() {
                 }, body: JSON.stringify(body)
             })
             const response = await log.json()
-            // console.log("first", response.data)
+            // console.log("first", response)
 
             if (response.status == true) {
                 Swal.fire({
@@ -82,7 +81,7 @@ export default function Login() {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Something went wrong!',
+                    text: 'Invalid email/mobile or password!',
                     timer: 1500
                 })
             }
@@ -117,9 +116,11 @@ export default function Login() {
                 ))}
                 <button>Submit</button>
                 <Grid item>
-                    <Link href="/" variant="body2">
+                <div onClick={()=>navigate('/')} className='link'>
+                  
                         Don't have an account? Sign Up
-                    </Link>
+                  
+                    </div>
                 </Grid>
             </form>
 

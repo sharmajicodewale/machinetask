@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./register.css";
 import FormInput from '../components/forminput/FormInput'
-import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Swal from "sweetalert2"
 import {useNavigate} from "react-router-dom"
@@ -141,9 +140,11 @@ const Register = () => {
         ))}
         <button>Submit</button>
         <Grid item>
-                <Link href="/login" variant="body2">
+            <div onClick={()=>navigate('/login')} className='link'>
+              
                   Already have an account? Sign in
-                </Link>
+           
+                </div>
               </Grid>
       </form>
 

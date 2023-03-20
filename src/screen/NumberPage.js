@@ -62,9 +62,9 @@ export default function NumberPage() {
 
       }
 
-      setValues({
-        number: "",
-      })
+      // setValues({
+      //   number: "",
+      // })
 
 
 

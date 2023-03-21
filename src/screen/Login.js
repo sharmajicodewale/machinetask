@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
-export default function Login() {
+export default function Login({ setIsLoggedIn }) {
  
     const navigate = useNavigate()
    
@@ -75,6 +75,7 @@ export default function Login() {
                 const jsonValue = JSON.stringify(response.data)
                 await AsyncStorage.setItem('data', jsonValue)
                 navigate('/profile')
+                setIsLoggedIn(true);
 
             }
             else {
